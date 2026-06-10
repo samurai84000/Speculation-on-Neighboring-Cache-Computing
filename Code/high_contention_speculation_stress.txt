@@ -1,0 +1,28 @@
+# high_contention_speculation_stress.txt
+# Purpose:
+#   Create contention while also creating opportunities for local speculation.
+#
+# Phase 1:
+#   Pull remote-home blocks into first local neighbor in each pair.
+# Phase 2:
+#   Nearby processors read the same blocks and may speculate locally.
+# Phase 3:
+#   Writes create invalidation/exclusive traffic.
+
+# Phase 1: seed local neighbors with remote-home data
+0 P1 READ 31
+0 P3 READ 30
+0 P5 READ 29
+0 P7 READ 28
+
+# Phase 2: local-neighbor speculative reads
+12 P2 READ 31
+12 P4 READ 30
+12 P6 READ 29
+12 P8 READ 28
+
+# Phase 3: create coherence traffic and invalidations
+18 P5 WRITE 31 NewData_31
+18 P7 WRITE 30 NewData_30
+20 P1 WRITE 29 NewData_29
+20 P3 WRITE 28 NewData_28

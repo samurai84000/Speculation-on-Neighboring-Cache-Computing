@@ -1,0 +1,17 @@
+experiment,processor_count,total_reads,total_writes,local_cache_hits,local_cache_misses,authoritative_reads_completed,speculative_reads_completed,speculative_attempts,speculative_successes,speculative_failures,speculative_squashes,speculative_success_rate_percent,validation_successes,validation_failures,exclusive_requests,exclusive_grants,invalidations_sent,invalidations_acknowledged,messages_created,messages_completed,average_path_distance,average_read_latency,average_authoritative_read_latency,average_speculative_read_latency,average_local_hit_latency,max_queue_depth
+Baseline Binary Tree,8,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,3.3333333333333335,13.5,13.5,0.0,0.0,2
+Express Lanes Only,8,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,1.3333333333333333,7.0,7.0,0.0,0.0,1
+Speculation Only,8,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,3.3333333333333335,13.5,13.5,0.0,0.0,2
+Full Optimized,8,2,0,0,2,1,1,1,1,0,0,100.0,1,0,0,0,0,0,8,8,1.375,7.5,7.0,8.0,0.0,2
+Baseline Binary Tree,16,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,4.666666666666667,17.5,17.5,0.0,0.0,2
+Express Lanes Only,16,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,1.3333333333333333,7.0,7.0,0.0,0.0,1
+Speculation Only,16,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,4.666666666666667,17.5,17.5,0.0,0.0,2
+Full Optimized,16,2,0,0,2,1,1,1,1,0,0,100.0,1,0,0,0,0,0,8,8,1.375,7.5,7.0,8.0,0.0,2
+Baseline Binary Tree,32,2,0,0,2,1,0,0,0,0,0,0.0,0,0,0,0,0,0,5,5,5.4,22.0,22.0,0.0,0.0,2
+Express Lanes Only,32,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,1.3333333333333333,7.0,7.0,0.0,0.0,1
+Speculation Only,32,2,0,0,2,1,0,0,0,0,0,0.0,0,0,0,0,0,0,5,5,5.4,22.0,22.0,0.0,0.0,2
+Full Optimized,32,2,0,0,2,1,1,1,1,0,0,100.0,1,0,0,0,0,0,8,8,1.375,7.5,7.0,8.0,0.0,2
+Baseline Binary Tree,64,2,0,0,2,1,0,0,0,0,0,0.0,0,0,0,0,0,0,5,5,6.6,25.0,25.0,0.0,0.0,2
+Express Lanes Only,64,2,0,0,2,2,0,0,0,0,0,0.0,0,0,0,0,0,0,6,6,1.3333333333333333,7.0,7.0,0.0,0.0,1
+Speculation Only,64,2,0,0,2,1,0,0,0,0,0,0.0,0,0,0,0,0,0,5,5,6.6,25.0,25.0,0.0,0.0,2
+Full Optimized,64,2,0,0,2,1,1,1,1,0,0,100.0,1,0,0,0,0,0,8,8,1.375,7.5,7.0,8.0,0.0,2

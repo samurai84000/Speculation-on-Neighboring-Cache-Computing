@@ -1,0 +1,16 @@
+# remote_home_local_speculation_success.txt
+# Purpose:
+#   Bring a remote-home block into P1, then have P2 speculate locally from P1.
+#
+# Network assumptions:
+#   P1 and P2 are under local switch S0.
+#   Address 31 is initially held by P8.
+#   With 4 bottom switches and modulo home mapping:
+#       Home(31) = S3
+#
+# Why this matters:
+#   This forces the first read to pull data across the network.
+#   Then the second read can use local speculation from P1.
+
+0 P1 READ 31
+10 P2 READ 31

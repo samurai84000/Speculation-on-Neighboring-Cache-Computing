@@ -1,0 +1,26 @@
+# local_speculation_after_install_test.txt
+# Purpose:
+#   Demonstrate local-only speculation.
+#
+# Setup assumption:
+#   The simulator names processors P1..P8, not P0..P7.
+#   S0 has local leaves P1 and P2.
+#
+# Expected behavior:
+#   1. P1 reads address 28.
+#      P1 cannot speculate from P8 because P8 is not under S0.
+#      So P1 falls back to Home(28), receives AUTHORITATIVE_DATA, and installs address 28.
+#
+#   2. A handful of cycles later, P2 reads address 28.
+#      Now S0's local directory should see that P1 has address 28 in SHARED state.
+#      S0 should send SPECULATIVE_FETCH to P1 and VALIDATION_REQUEST to Home(28).
+#
+# Important:
+#   If your simulator uses P0..P7 naming instead of P1..P8,
+#   change P1 -> P0 and P2 -> P1 below.
+
+0 P1 READ 28
+
+# Wait long enough for P1 to receive and install address 28.
+# In the current queued model, P1 installs address 28 around cycle 4.
+6 P2 READ 28

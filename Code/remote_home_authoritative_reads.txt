@@ -1,0 +1,10 @@
+# remote_home_authoritative_reads.txt
+# Purpose:
+#   Exercise remote-home authoritative reads without intentionally creating a local speculative candidate.
+#
+# This is useful for comparing normal directory read latency with express lanes on/off.
+
+0 P1 READ 31
+2 P3 READ 30
+4 P5 READ 29
+6 P7 READ 28

@@ -1,0 +1,24 @@
+# root_queue_contention_stress.txt
+# Purpose:
+#   Stress the switch queues by issuing many remote reads at the same time.
+#
+# This is intended to expose queueing delay. It may not produce many
+# speculation successes by itself; it is mainly a network contention test.
+
+0 P1 READ 31
+0 P2 READ 30
+0 P3 READ 29
+0 P4 READ 28
+0 P5 READ 15
+0 P6 READ 14
+0 P7 READ 13
+0 P8 READ 12
+
+8 P1 READ 27
+8 P2 READ 26
+8 P3 READ 25
+8 P4 READ 24
+8 P5 READ 7
+8 P6 READ 6
+8 P7 READ 5
+8 P8 READ 4
